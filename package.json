@@ -1,0 +1,63 @@
+{
+  "name": "dsh-peak-pill",
+  "version": "0.1.0",
+  "description": "DeepSeek peak/off-peak pricing pill under the DSH composer, with a countdown to the next change and Chinese holiday windows through 2027.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Diogo Silva <diogo.dk.silva@outlook.com>",
+  "homepage": "https://github.com/dksilv4/dsh-peak-pill#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dksilv4/dsh-peak-pill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dksilv4/dsh-peak-pill/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "cordis",
+    "cordis-plugin",
+    "pricing",
+    "peak",
+    "off-peak"
+  ],
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "locale/*.json",
+    "icon.svg",
+    "scripts/verify.mjs"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0-rc.1 <0.2.1-0 || >=0.2.1-rc.1 <0.2.2-0 || >=0.2.2-rc.1 <0.3.0-0"
+  },
+  "scripts": {
+    "test": "node scripts/verify.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

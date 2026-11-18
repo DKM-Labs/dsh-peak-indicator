@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Pílula de pico DeepSeek",
+    "description": "Mostra se a API DeepSeek está em horário de pico ou fora de pico, com contagem decrescente para a próxima mudança."
+  }
+}

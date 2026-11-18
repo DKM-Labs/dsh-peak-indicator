@@ -1,0 +1,5 @@
+url: https://github.com/dksilv4/dsh-peak-pill
+name: dksilv4/dsh-peak-pill
+category: usage
+description:
+  en: Adds a pill under the DSH composer that shows whether DeepSeek API pricing is peak or off-peak, with a countdown to the next change and Chinese holiday windows through 2027.
