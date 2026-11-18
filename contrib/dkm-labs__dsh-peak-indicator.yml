@@ -1,5 +1,5 @@
-url: https://github.com/dkm-labs/dsh-peak-indicator
-name: dkm-labs/dsh-peak-indicator
+url: https://github.com/DKM-Labs/dsh-peak-indicator
+name: DKM-Labs/dsh-peak-indicator
 category: usage
 description:
   en: Adds a pill under the DSH composer that shows whether DeepSeek API pricing is peak or off-peak, with a countdown to the next change and Chinese holiday windows through 2027.

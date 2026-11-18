@@ -5,13 +5,13 @@
   "type": "module",
   "license": "MIT",
   "author": "Diogo Silva <diogo.dk.silva@outlook.com>",
-  "homepage": "https://github.com/dkm-labs/dsh-peak-indicator#readme",
+  "homepage": "https://github.com/DKM-Labs/dsh-peak-indicator#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dkm-labs/dsh-peak-indicator.git"
+    "url": "git+https://github.com/DKM-Labs/dsh-peak-indicator.git"
   },
   "bugs": {
-    "url": "https://github.com/dkm-labs/dsh-peak-indicator/issues"
+    "url": "https://github.com/DKM-Labs/dsh-peak-indicator/issues"
   },
   "keywords": [
     "dsh",

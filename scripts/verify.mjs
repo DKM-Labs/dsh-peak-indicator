@@ -152,7 +152,7 @@ assert.match(patch, /name:\s*'@dkm-labs\/dsh-peak-indicator'/, 'patch row names 
 
 assert.match(read('LICENSE'), /^MIT License/, 'LICENSE is the MIT text');
 assert.match(read('README.md'), /dsh plugin --profile web add/, 'README documents installation');
-assert.match(read('README.md'), /github:dkm-labs\/dsh-peak-indicator/, 'README documents the GitHub install spec');
+assert.match(read('README.md'), /github:DKM-Labs\/dsh-peak-indicator/, 'README documents the GitHub install spec');
 
 const hostHalf = await import(pathToFileURL(join(root, 'index.js')).href);
 assert.equal(typeof hostHalf.apply, 'function', 'host half exports apply');

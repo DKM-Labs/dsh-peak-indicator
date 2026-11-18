@@ -1,6 +1,6 @@
 # dsh-peak-indicator
 
-A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (`dsh`) Web UI plugin from [DKM.Labs](https://github.com/dkm-labs): a small pill under the message composer that says whether the DeepSeek API is billing **Peak** or **Off-peak** right now, with a countdown to the next change.
+A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (`dsh`) Web UI plugin from [DKM.Labs](https://github.com/DKM-Labs): a small pill under the message composer that says whether the DeepSeek API is billing **Peak** or **Off-peak** right now, with a countdown to the next change.
 
 Published as `@dkm-labs/dsh-peak-indicator` (GitHub install; not on npm yet).
 
@@ -20,17 +20,17 @@ DeepSeek's API price depends on the time of day: peak hours cost twice the off-p
 The package is a DSH **bundle** (it declares `dsh.bundle.patch`), so the one-line install wires it into the profile:
 
 ```sh
-dsh plugin --profile web add github:dkm-labs/dsh-peak-indicator
+dsh plugin --profile web add github:DKM-Labs/dsh-peak-indicator
 ```
 
 Or from a local clone (edits show up after a page reload):
 
 ```sh
-git clone https://github.com/dkm-labs/dsh-peak-indicator.git
+git clone https://github.com/DKM-Labs/dsh-peak-indicator.git
 dsh plugin --profile web add ./dsh-peak-indicator
 ```
 
-From the GUI, the same spec goes into **Plugins → Add plugin**: `github:dkm-labs/dsh-peak-indicator`, the full repository URL, or an absolute directory path. The running `dsh web` recomposes live; if the pill does not appear, reload the page once.
+From the GUI, the same spec goes into **Plugins → Add plugin**: `github:DKM-Labs/dsh-peak-indicator`, the full repository URL, or an absolute directory path. The running `dsh web` recomposes live; if the pill does not appear, reload the page once.
 
 The package does not need a build step and has no runtime dependencies, so a Git install asks for no pnpm `allowBuilds` approval.
 
