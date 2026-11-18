@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-  id: 'dsh-peak-pill',
+  id: '@dkm-labs/dsh-peak-indicator',
   factory(require) {
     const React = require('react');
     const h = React.createElement;
@@ -160,7 +160,7 @@ window.__ModuleLoader__.load({
       apply(ctx) {
         ctx.slots.inject('conversation.composer.dock', () => ctx.slots.register({
           name: 'conversation.composer.dock',
-          id: 'dsh-peak-pill',
+          id: 'dsh-peak-indicator',
           order: 2,
         }, PeakPill));
       },

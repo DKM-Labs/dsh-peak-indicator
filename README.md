@@ -1,6 +1,8 @@
-# dsh-peak-pill
+# dsh-peak-indicator
 
-A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (`dsh`) Web UI plugin: a small pill under the message composer that says whether the DeepSeek API is billing **Peak** or **Off-peak** right now, with a countdown to the next change.
+A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (`dsh`) Web UI plugin from [DKM.Labs](https://github.com/dkm-labs): a small pill under the message composer that says whether the DeepSeek API is billing **Peak** or **Off-peak** right now, with a countdown to the next change.
+
+Published as `@dkm-labs/dsh-peak-indicator` (GitHub install; not on npm yet).
 
 ```
 Off-peak · peak in 2h 41m      ← green: half price
@@ -18,24 +20,24 @@ DeepSeek's API price depends on the time of day: peak hours cost twice the off-p
 The package is a DSH **bundle** (it declares `dsh.bundle.patch`), so the one-line install wires it into the profile:
 
 ```sh
-dsh plugin --profile web add github:dksilv4/dsh-peak-pill
+dsh plugin --profile web add github:dkm-labs/dsh-peak-indicator
 ```
 
 Or from a local clone (edits show up after a page reload):
 
 ```sh
-git clone https://github.com/dksilv4/dsh-peak-pill.git
-dsh plugin --profile web add ./dsh-peak-pill
+git clone https://github.com/dkm-labs/dsh-peak-indicator.git
+dsh plugin --profile web add ./dsh-peak-indicator
 ```
 
-From the GUI, the same spec goes into **Plugins → Add plugin**: `github:dksilv4/dsh-peak-pill`, the full repository URL, or an absolute directory path. The running `dsh web` recomposes live; if the pill does not appear, reload the page once.
+From the GUI, the same spec goes into **Plugins → Add plugin**: `github:dkm-labs/dsh-peak-indicator`, the full repository URL, or an absolute directory path. The running `dsh web` recomposes live; if the pill does not appear, reload the page once.
 
 The package does not need a build step and has no runtime dependencies, so a Git install asks for no pnpm `allowBuilds` approval.
 
 ### Uninstall
 
 ```sh
-dsh plugin --profile web remove dsh-peak-pill
+dsh plugin --profile web remove @dkm-labs/dsh-peak-indicator
 ```
 
 ## How the tier is decided
@@ -63,7 +65,7 @@ The tier is defined by DeepSeek's pricing page and can change; that page is auth
 node scripts/verify.mjs
 ```
 
-Offline and dependency-free: it loads `client.js` through a stub `window.__ModuleLoader__` exactly like the browser module table, renders the pill at fixed instants by mocking `Date.now`, and covers both peak windows, all boundaries, weekends, the 63-hour weekend countdown, 2026/2027 holiday days, the package contract, and the holiday calendar's day count.
+Offline and dependency-free: it loads `client.js` through a stub `window.__ModuleLoader__` exactly like the browser module table, renders the pill at fixed instants by mocking `Date.now`, and covers both peak windows, all boundaries, weekends, the 63-hour weekend countdown, 2026/2027 holiday days, the package contract, and the holiday calendar's day count. The same command runs in GitHub Actions on every push and pull request.
 
 ## Compatibility
 

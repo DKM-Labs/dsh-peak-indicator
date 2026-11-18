@@ -1,4 +1,4 @@
-// Offline verification for the dsh-peak-pill bundle.
+// Offline verification for the dsh-peak-indicator bundle.
 //
 // Run: node scripts/verify.mjs
 //
@@ -65,7 +65,7 @@ plugin.apply({
 assert.ok(registration, 'apply injects into a slot');
 assert.equal(registration.name, 'conversation.composer.dock', 'registers in the composer dock');
 assert.equal(registration.options.name, 'conversation.composer.dock');
-assert.equal(registration.options.id, pkg.name, 'slot cell id equals the package name');
+assert.equal(registration.options.id, 'dsh-peak-indicator', 'slot cell id is the short plugin id');
 assert.equal(typeof registration.options.order, 'number', 'declares a numeric order');
 
 function renderAt(iso) {
@@ -133,7 +133,7 @@ for (const day of ['2026-10-08', '2027-02-14', '2027-10-08']) {
   assert.ok(!holidayStamps.has(day), `holiday calendar leaves out ordinary day ${day}`);
 }
 
-assert.equal(pkg.name, 'dsh-peak-pill', 'package name');
+assert.equal(pkg.name, '@dkm-labs/dsh-peak-indicator', 'package name');
 assert.equal(pkg.license, 'MIT', 'package is MIT licensed');
 assert.notEqual(pkg.private, true, 'package is publishable');
 assert.equal(pkg.dsh?.bundle?.patch, './cordis.patch.yml', 'declares the bundle patch');
@@ -147,11 +147,12 @@ for (const file of ['index.js', 'client.js', 'cordis.patch.yml', 'README.md', 'L
 
 const patch = read('cordis.patch.yml');
 assert.match(patch, /-\s*insert:/, 'patch inserts a row');
-assert.match(patch, /id:\s*dsh-peak-pill/, 'patch row id');
-assert.match(patch, /name:\s*dsh-peak-pill/, 'patch row names the package');
+assert.match(patch, /id:\s*dsh-peak-indicator/, 'patch row id');
+assert.match(patch, /name:\s*'@dkm-labs\/dsh-peak-indicator'/, 'patch row names the package');
 
 assert.match(read('LICENSE'), /^MIT License/, 'LICENSE is the MIT text');
 assert.match(read('README.md'), /dsh plugin --profile web add/, 'README documents installation');
+assert.match(read('README.md'), /github:dkm-labs\/dsh-peak-indicator/, 'README documents the GitHub install spec');
 
 const hostHalf = await import(pathToFileURL(join(root, 'index.js')).href);
 assert.equal(typeof hostHalf.apply, 'function', 'host half exports apply');

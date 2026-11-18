@@ -1,17 +1,17 @@
 {
-  "name": "dsh-peak-pill",
+  "name": "@dkm-labs/dsh-peak-indicator",
   "version": "0.1.0",
   "description": "DeepSeek peak/off-peak pricing pill under the DSH composer, with a countdown to the next change and Chinese holiday windows through 2027.",
   "type": "module",
   "license": "MIT",
   "author": "Diogo Silva <diogo.dk.silva@outlook.com>",
-  "homepage": "https://github.com/dksilv4/dsh-peak-pill#readme",
+  "homepage": "https://github.com/dkm-labs/dsh-peak-indicator#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dksilv4/dsh-peak-pill.git"
+    "url": "git+https://github.com/dkm-labs/dsh-peak-indicator.git"
   },
   "bugs": {
-    "url": "https://github.com/dksilv4/dsh-peak-pill/issues"
+    "url": "https://github.com/dkm-labs/dsh-peak-indicator/issues"
   },
   "keywords": [
     "dsh",
